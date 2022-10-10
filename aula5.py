@@ -4,6 +4,14 @@ janela["bg"] = "orange"
 app = Frame (janela)
 app.grid()
 
+
+menuPrincipal = Menu(app)
+janela.config(menu=menuPrincipal)
+
+fileMenu = Menu(menuPrincipal)
+fileMenu.add_command(label="cadastrar", command=iniciarTelaCadastro)
+menuPrincipal.add_cascade(label="função" ,menu=fileMenu)
+
 def escrever():
     print("O meu nome é;", entryNome.get()
     , "e minha idade é:", entryIdade.get())

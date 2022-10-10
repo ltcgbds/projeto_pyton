@@ -1,4 +1,14 @@
 import tkinter as tk
+import mysql.connector
+
+def conexao():
+        conexao = mysql.connector.connect(
+                 host = "localhost" , 
+                 user = " root"
+                 passwd = "",
+                 db = "Usuarios"
+         )
+
 
 def createNewWindow():
     newWindow =tk.Toplevel(app)
